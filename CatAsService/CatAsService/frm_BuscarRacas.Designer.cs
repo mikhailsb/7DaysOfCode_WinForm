@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace CatAsService
 {
@@ -181,6 +182,7 @@ namespace CatAsService
             this.btn_favoritar.TabIndex = 1;
             this.btn_favoritar.Text = "Favoritar";
             this.btn_favoritar.UseVisualStyleBackColor = true;
+            this.btn_favoritar.Click += new System.EventHandler(this.btn_favoritar_Click);
             // 
             // btn_Buscar
             // 

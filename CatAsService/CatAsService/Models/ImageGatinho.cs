@@ -22,7 +22,7 @@ namespace CatAsService.Models
 
         [JsonProperty("height")]
         public int height { get; set; }
-        public static async Task<ImageGatinho> Desserializer(string Id)
+        public static async Task<ImageGatinho> BuscarImagemGato(string Id)
         {
             //ImageGatinho gatos = JsonConvert.DeserializeObject<ImageGatinho>(Json);
             //return gatos;

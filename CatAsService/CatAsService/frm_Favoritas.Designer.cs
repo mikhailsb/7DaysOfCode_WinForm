@@ -73,6 +73,7 @@ namespace CatAsService
             this.btn_Excluir.TabIndex = 3;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = true;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // frm_Favoritas
             // 
@@ -86,6 +87,7 @@ namespace CatAsService
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Favoritas";
             this.Text = "frm_Favoritas";
+            this.Load += new System.EventHandler(this.frm_Favoritas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

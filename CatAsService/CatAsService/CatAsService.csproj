@@ -103,8 +103,11 @@
     <Compile Include="Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AcessoCatApi.cs" />
     <Compile Include="Models\Cat.cs" />
+    <Compile Include="Models\Favoritar.cs" />
     <Compile Include="Models\ImageGatinho.cs" />
+    <Compile Include="Models\MeusFavoritos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Uteis\ConsultaAPI.cs" />
