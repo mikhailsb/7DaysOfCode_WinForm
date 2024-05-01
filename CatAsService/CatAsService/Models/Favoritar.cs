@@ -19,17 +19,25 @@ namespace CatAsService.Models
 
         public async Task<string> AdicionarFavoritos(Favoritar fav)
         {
-            var response = await "https://api.thecatapi.com/v1"
+            try
+            {
+                var response = await "https://api.thecatapi.com/v1"
                 .AppendPathSegment("favourites/")
-                .SetQueryParam( "api_key", AcessoCatApi.KeyCatAPI())
-                .SetQueryParams( new { 
-                    image_id = fav.image_id, 
-                    sub_id = fav.sub_id 
+                .SetQueryParam("api_key", AcessoCatApi.KeyCatAPI())
+                .SetQueryParams(new
+                {
+                    image_id = fav.image_id,
+                    sub_id = fav.sub_id
                 })
                 .PostJsonAsync(fav)
                 .ReceiveString();
 
-            return response;
+                return response;
+            }
+            catch (FlurlHttpTimeoutException ex)
+            {
+                throw new Exception($"Ops, tempo esgotado ao adicionar gatinho aos Favoritos. \nMensagem de erro retornado: {ex.Message}");
+            }
         }
         public static async Task<string> DeletarFavorito(MeusFavoritos mfObject)
         {

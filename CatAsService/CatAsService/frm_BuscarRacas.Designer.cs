@@ -97,6 +97,7 @@ namespace CatAsService
             this.cbx_RacasGato.Name = "cbx_RacasGato";
             this.cbx_RacasGato.Size = new System.Drawing.Size(121, 24);
             this.cbx_RacasGato.TabIndex = 10;
+            this.cbx_RacasGato.SelectedIndexChanged += new System.EventHandler(this.cbx_RacasGato_SelectedIndexChanged);
             // 
             // lbl_ResultDescricao
             // 
@@ -186,6 +187,7 @@ namespace CatAsService
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.Enabled = false;
             this.btn_Buscar.Location = new System.Drawing.Point(285, 16);
             this.btn_Buscar.Name = "btn_Buscar";
             this.btn_Buscar.Size = new System.Drawing.Size(75, 23);

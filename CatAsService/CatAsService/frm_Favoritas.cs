@@ -62,6 +62,7 @@ namespace CatAsService
                 {
                     MessageBox.Show("Gato removido mas com respeito.", "Cat AS A Service", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AtualizarListBox();
+                    btn_Excluir.Enabled = false;
                 }
             }
             catch (NullReferenceException)
@@ -69,6 +70,11 @@ namespace CatAsService
                 MessageBox.Show("Selecione um Gato para remover dos favoritos.", "Cat AS A Service", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btn_Excluir.Enabled = true;
         }
     }
 }
